@@ -1,0 +1,26 @@
+---
+import '../styles/global.css';
+const { title = 'XEROG — archive', description = 'Independent security research, writeups, projects and notes.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content={description} />
+  <link rel="icon" href="/favicon.svg" />
+  <title>{title}</title>
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header">
+    <a class="mark" href="/" aria-label="Xerog home"><span>XE</span><i>ROG</i></a>
+    <nav>
+      <a href="/#work">work</a><a href="/writeups">writeups</a><a href="/projects">projects</a><a href="/about">about</a>
+    </nav>
+    <span class="status"><b></b> ONLINE / 2026</span>
+  </header>
+  <main><slot /></main>
+  <footer class="site-footer"><span>© 2026 XEROG</span><span>built for the work, not the title.</span><a href="/about">contact →</a></footer>
+</body>
+</html>
