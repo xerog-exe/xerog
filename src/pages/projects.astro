@@ -1,0 +1,5 @@
+---
+import Base from '../layouts/Base.astro';
+const projects=[['01','JSX','JavaScript Secret by Xerog','Security tooling','JWT / Google API / AWS / Firebase detectors'],['02','RetroRecon','Wayback analyzer','Recon','Historical URL and endpoint analysis'],['03','Rang De','Bug bounty workspace','Research','Experiments, notes and hunting workflow']];
+---
+<Base title="XEROG — projects"><div class="page-head"><h1>PROJECTS</h1><span class="mono">/ things that escaped the notebook</span></div><div class="entries">{projects.map(p=><article class="entry"><span class="date">{p[0]}</span><div><a href="#"><h2>{p[1]}</h2></a><p>{p[2]} · {p[3]} · {p[4]}</p></div><span class="date">BUILD LOG</span></article>)}</div></Base>
